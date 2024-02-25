@@ -74,4 +74,4 @@ CONF_37,179.99766277109416,4.283353778243777
 </pre>
 
 <p>5. Plot result</p>
-<img src="">
+<img src="https://github.com/gkxiao/xtb-scan/blob/main/example.png" align='middle' />
