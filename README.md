@@ -73,5 +73,19 @@ CONF_36,174.98865151282774,3.9824196092070707
 CONF_37,179.99766277109416,4.283353778243777
 </pre>
 
-<p>5. Plot result</p>
+<p>6. Plot result</p>
 <img src="https://github.com/gkxiao/xtb-scan/blob/main/example.png" align='middle' />
+
+<p>7. Split conformer ensemble into single SDF file:</p>
+<pre lang="python">
+obabel -isdf xtbscan.sdf -osdf -O CONF_.sdf -m 
+</pre>
+
+<p>8. generate ORCA input file to optimize conformer with dihedral angle constrained:</p>
+<pre lang="python">
+sdf2orca CONF_1.sdf 8 2 3 1 CONF_1.inp
+</pre>
+<p>Perform optimization with ORCA</p>
+<pre lang="python">
+orca CONF_1.inp > CONF_1.out
+</pre>
