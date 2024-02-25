@@ -81,11 +81,11 @@ CONF_37,179.99766277109416,4.283353778243777
 obabel -isdf xtbscan.sdf -osdf -O CONF_.sdf -m 
 </pre>
 
-<p>8. generate ORCA input file to optimize conformer with dihedral angle constrained:</p>
+<p>8. Generate ORCA input file to optimize conformer with dihedral angle constrained:</p>
 <pre lang="python">
 sdf2orca CONF_1.sdf 8 2 3 1 CONF_1.inp
 </pre>
-<p>Perform optimization with ORCA</p>
+<p>Perform optimization with ORCA at BP86-D3BJ/DEF2-TZVP theory level:</p>
 <pre lang="python">
 orca CONF_1.inp > CONF_1.out
 </pre>
