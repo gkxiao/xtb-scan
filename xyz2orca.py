@@ -4,7 +4,7 @@ def mol2gau(mol,charge,gauinp,atm1,atm2,atm3,atm4):
     create ORCA constrained OPT input file for xyz.
     """
     cpu = '%PAL NPROCS 24 END'
-    route = '! BP86 DEF2-TZVP D3 OPT'
+    route = '! BP86 DEF2-TZVP D3 OPT RIJCOSX Def2/J'
     dihedral='{D '+str(int(atm1)-1)+' '+str(int(atm2)-1)+' '+str(int(atm3)-1)+' '+str(int(atm4)-1)+' C}'
     fout = open(gauinp,'w') 
     fout.write(cpu+'\n')
