@@ -76,16 +76,27 @@ CONF_37,179.99766277109416,4.283353778243777
 <p>6. Plot result</p>
 <img src="https://github.com/gkxiao/xtb-scan/blob/main/example.png" align='middle' />
 
-<p>7. Split conformer ensemble into single SDF file:</p>
+<h2>Optimize conformer at BP86-D3/DEF2-TZVP theory level with ORCA</h2>
+<p>7. Split conformer ensemble into single SDF/XYZ file:</p>
+<p>Split the conformer ensemble into xyz file:</p>
 <pre lang="python">
-obabel -isdf xtbscan.sdf -osdf -O CONF_.sdf -m 
+obabel -ixyz xtbscan.log -oxyz -O CONF_.xyz -m 
+</pre>
+<p>Split the conformer ensemble into sdf file:</p>
+<pre lang="python">
+obabel -ixyz xtbscan.xyz -osdf -O CONF_.sdf -m 
 </pre>
 
 <p>8. Generate ORCA input file to optimize conformer with dihedral angle constrained:</p>
+<p>Create ORCA input file from SDF:</p>
 <pre lang="python">
 sdf2orca CONF_1.sdf 8 2 3 1 CONF_1.inp
 </pre>
-<p>Perform optimization with ORCA at BP86-D3BJ/DEF2-TZVP theory level:</p>
+<p>Alterantively, create ORCA input file from XYZ:</p>
+<pre lang="python">
+xyz2orca CONF_1.xyz 0 8 2 3 1 CONF_1.inp
+</pre>
+<p>Perform optimization with ORCA at BP86-D3/DEF2-TZVP theory level:</p>
 <pre lang="python">
 orca CONF_1.inp > CONF_1.out
 </pre>
