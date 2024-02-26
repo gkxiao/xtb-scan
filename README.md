@@ -76,7 +76,7 @@ CONF_37,179.99766277109416,4.283353778243777
 <h3>6. Plot result</h3>
 <img src="https://github.com/gkxiao/xtb-scan/blob/main/example.png" align='middle' />
 
-<h2>Optimize conformer at BP86-D3/DEF2-TZVP theory with ORCA</h2>
+<h2>Optimize conformer at DFT level with ORCA</h2>
 <h3>7. Split conformer ensemble into single SDF/XYZ file</h3>
 <p>Split the conformer ensemble into xyz file:</p>
 <pre lang="python">
