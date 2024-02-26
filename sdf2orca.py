@@ -5,7 +5,7 @@ def mol2gau(mol,gauinp,atm1,atm2,atm3,atm4):
     Convert RDKIT mol into ORCA constrained OPT input file.
     """
     cpu = '%PAL NPROCS 24 END'
-    route = '! BP86 DEF2-TZVP D3 OPT RIJCOSX'
+    route = '! BP86 DEF2-TZVP D3 OPT'
     dihedral='{D '+str(int(atm1)-1)+' '+str(int(atm2)-1)+' '+str(int(atm3)-1)+' '+str(int(atm4)-1)+' C}'
     fout = open(gauinp,'w') 
     fout.write(cpu+'\n')
