@@ -100,3 +100,10 @@ xyz2orca CONF_1.xyz 0 8 2 3 1 CONF_1_opt.inp
 <pre lang="python">
 orca CONF_1_opt.inp > CONF_1_opt.out
 </pre>
+<h2>Reference</h2>
+<ol>
+   <li>User Guide to Semiempirical Tight Binding.<a href="https://xtb-docs.readthedocs.io/en/latest/">https://xtb-docs.readthedocs.io/en/latest</a></li>
+   <li>ORCA tutorials. <a href="https://www.orcasoftware.de/tutorials_orca">ORCA tutorials - Compatible with ORCA 5.0!</a></li>
+   <li>ORCA input library. <a href="https://sites.google.com/site/orcainputlibrary/">https://sites.google.com/site/orcainputlibrary</a></li>
+   <li>M. Bursch, J.-M. Mewes, A. Hansen, S. Grimme. Best-Practice DFT Protocols for Basic Molecular Computational Chemistry. Angew. Chem. Int. Ed. 2022, 61, e202205735. https://doi.org/10.1002/anie.202205735 </li>
+</ol>
