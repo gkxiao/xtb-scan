@@ -96,7 +96,7 @@ sdf2orca CONF_1.sdf 8 2 3 1 CONF_1.inp
 <pre lang="python">
 xyz2orca CONF_1.xyz 0 8 2 3 1 CONF_1.inp
 </pre>
-<h3>Perform optimization with ORCA at BP86-D3/DEF2-TZVP level</h3>
+<h3>9. Perform optimization with ORCA at BP86-D3/DEF2-TZVP level</h3>
 <pre lang="python">
 orca CONF_1.inp > CONF_1.out
 </pre>
