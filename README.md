@@ -2,12 +2,12 @@
 <img src="https://github.com/gkxiao/xtb-scan/blob/main/fragment.png" align='middle' ">
 <p style="text-align:center;">Figure 1. Example molecule. Highlighted dihedral: O8-C3-C2-C1</p>
 
-<p>1. Convert SDF into tmol:</p>
+<h3>1. Convert SDF into tmol:</h3>
 <pre lang="python">
 obabel -isdf 7jrn_ligand_fragment.sdf -otmol -O fragment.coord 
 </pre>
 
-<p>2. Prepare input file: scan.inp</p>
+<h3>2. Prepare input file: scan.inp</h3>
 <pre lang="python">
 $constrain
  force constant=50.0
@@ -17,17 +17,17 @@ $scan
 $end
 </pre>
 
-<p>3. Perform torsion scan</p>
+<h3>3. Perform torsion scan</h3>
 <pre lang="python">
 /public/apps/xtb-6.5.1/bin/xtb fragment.coord --opt verytight --input scan.inp --chrg 0 --uhf 0
 </pre>
 
-<p>4. Convet xyz into sdf</p>
+<h3>4. Convet xyz into sdf</h3>
 <pre lang="python">
 obabel -ixyz xtbscan.log -osdf -O xtbscan.sdf 
 </pre>
 
-<p>5. Extract dihedral scan result:</p>
+<h3>5. Extract dihedral scan result:</h3>
 <pre lang="python">
 extract_result_from_xtbscan.py xtbscan.sdf 3 2 1 8
 </pre>
@@ -73,11 +73,11 @@ CONF_36,174.98865151282774,3.9824196092070707
 CONF_37,179.99766277109416,4.283353778243777
 </pre>
 
-<p>6. Plot result</p>
+<h3>6. Plot result</h3>
 <img src="https://github.com/gkxiao/xtb-scan/blob/main/example.png" align='middle' />
 
-<h2>Optimize conformer at BP86-D3/DEF2-TZVP theory level with ORCA</h2>
-<p>7. Split conformer ensemble into single SDF/XYZ file:</p>
+<h2>Optimize conformer at BP86-D3/DEF2-TZVP theory with ORCA</h2>
+<h3>7. Split conformer ensemble into single SDF/XYZ file</h3>
 <p>Split the conformer ensemble into xyz file:</p>
 <pre lang="python">
 obabel -ixyz xtbscan.log -oxyz -O CONF_.xyz -m 
@@ -87,7 +87,7 @@ obabel -ixyz xtbscan.log -oxyz -O CONF_.xyz -m
 obabel -ixyz xtbscan.xyz -osdf -O CONF_.sdf -m 
 </pre>
 
-<p>8. Generate ORCA input file to optimize conformer with dihedral angle constrained:</p>
+<h3>8. Generate ORCA input file to optimize conformer with dihedral angle constrained:</h3>
 <p>Create ORCA input file from SDF:</p>
 <pre lang="python">
 sdf2orca CONF_1.sdf 8 2 3 1 CONF_1.inp
@@ -96,7 +96,7 @@ sdf2orca CONF_1.sdf 8 2 3 1 CONF_1.inp
 <pre lang="python">
 xyz2orca CONF_1.xyz 0 8 2 3 1 CONF_1.inp
 </pre>
-<p>Perform optimization with ORCA at BP86-D3/DEF2-TZVP theory level:</p>
+<h3>Perform optimization with ORCA at BP86-D3/DEF2-TZVP level</h3>
 <pre lang="python">
 orca CONF_1.inp > CONF_1.out
 </pre>
