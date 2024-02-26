@@ -107,4 +107,5 @@ orca CONF_1_opt.inp > CONF_1_opt.out
    <li>ORCA tutorials. <a href="https://www.orcasoftware.de/tutorials_orca">ORCA tutorials - Compatible with ORCA 5.0!</a></li>
    <li>ORCA input library. <a href="https://sites.google.com/site/orcainputlibrary/">https://sites.google.com/site/orcainputlibrary</a></li>
    <li>M. Bursch, J.-M. Mewes, A. Hansen, S. Grimme. Best-Practice DFT Protocols for Basic Molecular Computational Chemistry. Angew. Chem. Int. Ed. 2022, 61, e202205735. https://doi.org/10.1002/anie.202205735 </li>
+   <li>Grimme S, Hansen A, Ehlert S, Mewes J-M. <a href="https://chemrxiv.org/engage/chemrxiv/article-details/60c75338702a9b696218c304">r2SCAN-3c: An Efficient “Swiss Army Knife” Composite Electronic-Structure Method</a>. ChemRxiv. 2020; doi:10.26434/chemrxiv.13333520.v2 This content is a preprint and has not been peer-reviewed.</li>
 </ol>
