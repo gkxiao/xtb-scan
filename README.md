@@ -87,16 +87,16 @@ obabel -ixyz xtbscan.log -oxyz -O CONF_.xyz -m
 obabel -ixyz xtbscan.xyz -osdf -O CONF_.sdf -m 
 </pre>
 
-<h3>8. Generate ORCA input file to optimize conformer with dihedral angle constrained:</h3>
+<h3>8. Generate ORCA input file to optimize conformer with dihedral angle constrained</h3>
 <p>Create ORCA input file from SDF:</p>
 <pre lang="python">
-sdf2orca CONF_1.sdf 8 2 3 1 CONF_1.inp
+sdf2orca CONF_1.sdf 8 2 3 1 CONF_1_opt.inp
 </pre>
 <p>Alterantively, create ORCA input file from XYZ:</p>
 <pre lang="python">
-xyz2orca CONF_1.xyz 0 8 2 3 1 CONF_1.inp
+xyz2orca CONF_1.xyz 0 8 2 3 1 CONF_1_opt.inp
 </pre>
 <h3>9. Perform optimization with ORCA at BP86-D3/DEF2-TZVP level</h3>
 <pre lang="python">
-orca CONF_1.inp > CONF_1.out
+orca CONF_1_opt.inp > CONF_1_opt.out
 </pre>
