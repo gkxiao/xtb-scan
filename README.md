@@ -100,6 +100,7 @@ xyz2orca CONF_1.xyz 0 8 2 3 1 CONF_1_opt.inp
 <pre lang="python">
 orca CONF_1_opt.inp > CONF_1_opt.out
 </pre>
+<p>Chemistry model r2scan-3c/def2-mtzvpp and r2scan-3c/def2-tzvp is recommnnded.</p>
 <h2>Reference</h2>
 <ol>
    <li>User Guide to Semiempirical Tight Binding.<a href="https://xtb-docs.readthedocs.io/en/latest/">https://xtb-docs.readthedocs.io/en/latest</a></li>
