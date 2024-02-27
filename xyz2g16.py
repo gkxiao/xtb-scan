@@ -26,14 +26,14 @@ def xyz2gau(xyzfile,charge,gauinp,atm1,atm2,atm3,atm4):
 if __name__ == "__main__":
     import sys,string,argparse
     from optparse import OptionParser
-    parser = argparse.ArgumentParser(description="Create ORCA input file for xzy file.\n")
-    parser.add_argument('xyzfile',metavar='<Input>',help="XYZ file with full hydrogen")
+    parser = argparse.ArgumentParser(description="Create Gaussian input file from XYZ file.\n")
+    parser.add_argument('xyzfile',metavar='<Input>',help="Input XYZ file")
     parser.add_argument('charge',metavar='<charge>',help="formal charge")
     parser.add_argument('atom1',metavar='<atom1>',help="Atom 1")
     parser.add_argument('atom2',metavar='<atom2>',help="Atom 2")
     parser.add_argument('atom3',metavar='<atom3>',help="Atom 3")
     parser.add_argument('atom4',metavar='<atom4>',help="Atom 4")
-    parser.add_argument('output',metavar='<Output>',help="ORCA input file")
+    parser.add_argument('output',metavar='<Output>',help="Gaussian 16 input file")
     args = parser.parse_args()
     xyzfile = args.xyzfile
     charge = args.charge
