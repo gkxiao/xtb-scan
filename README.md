@@ -1,6 +1,6 @@
 <h2>Dihedral scan with xTB</h2>
 <img src="https://github.com/gkxiao/xtb-scan/blob/main/fragment.png" align='middle' ">
-<p style="text-align:center;">Figure 1. Example molecule. Highlighted dihedral: O8-C3-C2-C1</p>
+<p style="text-align:center;">Figure 1. Example molecule. Highlighted dihedral: C3-C2-C1-O8</p>
 
 <h3>1. Convert SDF into tmol:</h3>
 <pre lang="python">
