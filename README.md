@@ -96,17 +96,6 @@ sdf2orca.py CONF_1.sdf 3 2 1 8 CONF_1_opt.inp
 <pre lang="python">
 xyz2orca.py CONF_1.xyz 0 3 2 1 8 CONF_1_opt.inp
 </pre>
-<h3>9. Perform optimization with ORCA at BP86-D3/DEF2-TZVP level</h3>
-<pre lang="python">
-orca CONF_1_opt.inp > CONF_1_opt.out
-</pre>
-<p>Chemistry model r2scan-3c/def2-mtzvpp and r2scan-3c/def2-tzvp is recommnnded.</p>
-
-<h2>Optimize conformer at DFT level with Gaussian 16</h2>
-<p>Create Gaussian input file from XYZ:</p>
-<pre lang="python">
-xyz2g16.py CONF_1.xyz 0 3 2 1 8 CONF_1.com
-</pre>
 <pre lang="python" line="1">
 cat CONF_1.xyz
 </pre>
@@ -148,6 +137,18 @@ end
 end
 * xyzfile 0 1 CONF_1.xyz
 </pre>
+<h3>9. Perform optimization with ORCA at BP86-D3/DEF2-TZVP level</h3>
+<pre lang="python">
+orca CONF_1_opt.inp > CONF_1_opt.out
+</pre>
+<p>Chemistry model r2scan-3c/def2-mtzvpp and r2scan-3c/def2-tzvp is recommnnded.</p>
+
+<h2>Optimize conformer at DFT level with Gaussian 16</h2>
+<p>Create Gaussian input file from XYZ:</p>
+<pre lang="python">
+xyz2g16.py CONF_1.xyz 0 3 2 1 8 CONF_1.com
+</pre>
+
 <p>Perform optimization with Gaussian 16 at B3LYP-D3BJ/6-311+G(d,p) level:</p>
 <pre lang="python">
 g16 -p=24 -m=24GB CONF_1.com
