@@ -113,6 +113,8 @@ g16 -p=24 -m=24GB CONF_1.com
 </pre>
 <pre lang="python" line="1">
 cat CONF_1.com
+</pre>
+<pre lang="python" line="1">
 %chk=CONF_1_D_3-2-1-8_constrained_opt.chk
 # B3LYP/6-311+G(d,p) OPT=(modredundant) symmetry=(none) EmpiricalDispersion=(gd3bj)
 &#x200B
