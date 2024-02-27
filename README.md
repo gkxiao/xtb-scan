@@ -115,9 +115,9 @@ g16 -p=24 -m=24GB CONF_1.com
 cat CONF_1.com
 %chk=CONF_1_D_3-2-1-8_constrained_opt.chk
 # B3LYP/6-311+G(d,p) OPT=(modredundant) symmetry=(none) EmpiricalDispersion=(gd3bj)
-
+&#x200B
 CONF_1 Dihedral angle 3-2-1-8 constrained optimization
-
+&#x200B
 0 1
 C         10.56195      -10.60435       32.85972
 C         10.19983       -9.15743       32.99504
@@ -141,9 +141,9 @@ H         10.82360      -13.06841       32.63810
 H          9.38379      -13.43432       33.61796
 H          9.24587      -13.30419       31.84828
 H          7.50011       -7.11642       33.32045
-
+&#x200B
 3 2 1 8 F
-
+&#x200B
 !a blank line
 </pre>
 <h2>Reference</h2>
