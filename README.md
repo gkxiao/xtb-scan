@@ -107,9 +107,44 @@ orca CONF_1_opt.inp > CONF_1_opt.out
 <pre lang="python">
 xyz2g16.py CONF_1.xyz 0 3 2 1 8 CONF_1.com
 </pre>
-<p>Perform optimization with Gaussian 16:</p>
+<p>Perform optimization with Gaussian 16 at B3LYP-D3BJ/6-311+G(d,p) level:</p>
 <pre lang="python">
 g16 -p=24 -m=24GB CONF_1.com
+</pre>
+<pre lang="python">
+cat CONF_1.com
+%chk=CONF_1_D_3-2-1-8_constrained_opt.chk
+# B3LYP/6-311+G(d,p) OPT=(modredundant) symmetry=(none) EmpiricalDispersion=(gd3bj)
+
+CONF_1 Dihedral angle 3-2-1-8 constrained optimization
+
+0 1
+C         10.56195      -10.60435       32.85972
+C         10.19983       -9.15743       32.99504
+C         11.21189       -8.17992       33.00934
+C          8.87240       -8.73805       33.10874
+C         12.66448       -8.50784       32.89355
+C          8.53742       -7.40450       33.23466
+C          9.53471       -6.44568       33.25005
+O         11.71025      -10.99973       32.75833
+C         10.85208       -6.84167       33.13765
+N          9.53246      -11.49006       32.85262
+C          9.75040      -12.90960       32.73279
+H         12.97318       -9.16647       33.70268
+H         12.86352       -9.04205       31.96701
+H         13.26278       -7.59950       32.92114
+H          8.05858       -9.44826       33.10138
+H          9.28610       -5.39937       33.34851
+H         11.63184       -6.09337       33.14895
+H          8.57975      -11.18552       32.94396
+H         10.82360      -13.06841       32.63810
+H          9.38379      -13.43432       33.61796
+H          9.24587      -13.30419       31.84828
+H          7.50011       -7.11642       33.32045
+
+3 2 1 8 F
+
+!a blank line
 </pre>
 <h2>Reference</h2>
 <ol>
