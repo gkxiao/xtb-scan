@@ -90,17 +90,27 @@ obabel -ixyz xtbscan.xyz -osdf -O CONF_.sdf -m
 <h3>8. Generate ORCA input file to optimize conformer with dihedral angle constrained</h3>
 <p>Create ORCA input file from SDF:</p>
 <pre lang="python">
-sdf2orca CONF_1.sdf 8 2 3 1 CONF_1_opt.inp
+sdf2orca.py CONF_1.sdf 8 2 3 1 CONF_1_opt.inp
 </pre>
 <p>Alterantively, create ORCA input file from XYZ:</p>
 <pre lang="python">
-xyz2orca CONF_1.xyz 0 8 2 3 1 CONF_1_opt.inp
+xyz2orca.py CONF_1.xyz 0 8 2 3 1 CONF_1_opt.inp
 </pre>
 <h3>9. Perform optimization with ORCA at BP86-D3/DEF2-TZVP level</h3>
 <pre lang="python">
 orca CONF_1_opt.inp > CONF_1_opt.out
 </pre>
 <p>Chemistry model r2scan-3c/def2-mtzvpp and r2scan-3c/def2-tzvp is recommnnded.</p>
+
+<h2>Optimize conformer at DFT level with Gaussian 16</h2>
+<p>Create Gaussian input file from XYZ:</p>
+<pre lang="python">
+xyz2g16.py CONF_1.xyz 0 3 2  8 CONF_1.com
+</pre>
+<p>Perform optimization with Gaussian 16:</p>
+<pre lang="python">
+g16 -p=24 -m=24GB CONF_1.com
+</pre>
 <h2>Reference</h2>
 <ol>
    <li>User Guide to Semiempirical Tight Binding.<a href="https://xtb-docs.readthedocs.io/en/latest/">https://xtb-docs.readthedocs.io/en/latest</a></li>
