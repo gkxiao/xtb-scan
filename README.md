@@ -111,7 +111,7 @@ xyz2g16.py CONF_1.xyz 0 3 2 1 8 CONF_1.com
 <pre lang="python">
 g16 -p=24 -m=24GB CONF_1.com
 </pre>
-<pre lang="python">
+<pre lang="python" line="1">
 cat CONF_1.com
 %chk=CONF_1_D_3-2-1-8_constrained_opt.chk
 # B3LYP/6-311+G(d,p) OPT=(modredundant) symmetry=(none) EmpiricalDispersion=(gd3bj)
